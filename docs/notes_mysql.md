@@ -9,7 +9,7 @@
 ### Установка
 Официальная страница по скачиванию и установке: https://dev.mysql.com/doc/refman/5.7/en/linux-installation.html
 
-Будем устанавливать MySQL из Yum репозитория, подробнвй официальный мануал: https://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
+Будем устанавливать MySQL из Yum репозитория, подробный официальный мануал: https://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
 
 На данном этапе не забыть про пароль для пользователя 'root'@'localhost'. Он был автоматически сгененрирован при установке MySQL сервера и для дальнейшего его использования его обязательно необходимо сменить.
 
@@ -17,6 +17,9 @@
 Они должны быть не менее 8-ми символов.
 Если этот момент был упущен, то лучше еще раз перечитать раздел [2.5.1 Installing MySQL on Linux Using the MySQL Yum Repository](https://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html) официальной документации. 
 
+Так же не забываем прочитать [2.10.1 Initializing the Data Directory](https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html)
+
+Если не отключен **selinux**, то не забываем указать контекст папки, в которой будут храниться данные.
 
 ### Насторойка
 
@@ -25,4 +28,7 @@
 
 
 ### Перенос данных (содание резервных копий)
+
+
+### Репликация master -> slave
 
