@@ -9,7 +9,7 @@
 ### Установка
 Официальная страница по скачиванию и установке: https://dev.mysql.com/doc/refman/5.7/en/linux-installation.html
 
-Будем устанавливать MySQL из Yum репозитария, подробнвй официальный мануал: https://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
+Будем устанавливать MySQL из Yum репозитория, подробнвй официальный мануал: https://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
 
 На данном этапе не забыть про пароль для пользователя 'root'@'localhost'. Он был автоматически сгененрирован при установке MySQL сервера и для дальнейшего его использования его обязательно необходимо сменить.
 
