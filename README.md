@@ -3,6 +3,9 @@
 [Linux](docs/notes_linux.md)
 
 В качестве рабочего был выбран дистрибутив [CentOS](https://www.centos.org/), хорошо показавший себя в различных рабочих проектах.
+~~~
+Далее будет описываться цстановка, настройка и эксплуатация ПО на ОС CentOS 7
+~~~ 
 
 [Apache HTTP Server](https://httpd.apache.org/)
 
