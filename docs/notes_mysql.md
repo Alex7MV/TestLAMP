@@ -25,14 +25,27 @@ semanage fcontext -a -t mysqld_db_t "/home/mysql(/.*)?"
 restorecon -Rv /home/mysql
 ~~~
 
+Так же не забываем прочитать [2.10.1 Initializing the Data Directory](https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html)
+
 Файл с настройками my.cnf располагается в папке /etc, прописываем папку /home/mysql 
 ~~~
 datadir=/home/mysql
 socket=/home/mysql/mysql.sock
+#
+# Указываем чтобы все таблицы создавались в нижнем регистре и не учитывася регистр при их написании 
+lower_case_table_names=1
+#
+# Указываем размер буфера для хранения и индексов, и данных
+# 70-80% доступной оперативной памяти (если, конечно, используются только InnoDB-таблицы)
+#
+innodb_buffer_pool_size=128M
 
 ~~~
 
 ### Запуск /  Автозапуск
+При первом не забываем про пароль для пользователя 'root'@'localhost'. 
+Он будет автоматически сгененрирован при установке MySQL сервера и для дальнейшего его использования его обязательно необходимо сменить.
+
 Запуск MySQL 
 ~~~
 sudo service mysqld start
@@ -42,15 +55,9 @@ sudo service mysqld start
 sudo service mysqld status
 ~~~
 
-На данном этапе не забыть про пароль для пользователя 'root'@'localhost'. Он был автоматически сгененрирован при установке MySQL сервера и для дальнейшего его использования его обязательно необходимо сменить.
-
 Не забаваем что в данной версии в целях безопасности изменились требования к паролям создаваемых пользователей.
 Они должны быть не менее 8-ми символов.
 Если этот момент был упущен, то лучше еще раз перечитать раздел [2.5.1 Installing MySQL on Linux Using the MySQL Yum Repository](https://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html) официальной документации. 
-
-Так же не забываем прочитать [2.10.1 Initializing the Data Directory](https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html)
-
- 
 
 ### Администрирование
 Подробное описание [администнирования MySQL](notes_mysql_admin.md)
