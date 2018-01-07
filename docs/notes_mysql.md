@@ -30,7 +30,6 @@ restorecon -Rv /home/mysql
 Файл с настройками my.cnf располагается в папке /etc, прописываем папку /home/mysql 
 ~~~
 datadir=/home/mysql
-socket=/home/mysql/mysql.sock
 #
 # Указываем чтобы все таблицы создавались в нижнем регистре и не учитывася регистр при их написании 
 lower_case_table_names=1
@@ -39,12 +38,12 @@ lower_case_table_names=1
 # 70-80% доступной оперативной памяти (если, конечно, используются только InnoDB-таблицы)
 #
 innodb_buffer_pool_size=128M
-
 ~~~
 
 ### Запуск /  Автозапуск
 При первом не забываем про пароль для пользователя 'root'@'localhost'. 
 Он будет автоматически сгененрирован при установке MySQL сервера и для дальнейшего его использования его обязательно необходимо сменить.
+Ищем его по строке "A temporary password is generated for root@localhost" в файле /var/log/mysqld.log.
 
 Запуск MySQL 
 ~~~
