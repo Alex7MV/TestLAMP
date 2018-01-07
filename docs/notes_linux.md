@@ -7,7 +7,7 @@ sudo yum -y install update upgrade
 
 Устанавливаем epel репозиторий ([Extra Packages for Enterprise Linux](https://fedoraproject.org/wiki/EPEL))
 ~~~
-epel-release
+sudo yum -y install epel-release
 ~~~
 
 Устанавливаем утилиты для работы с **selinux**
