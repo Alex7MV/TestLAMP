@@ -56,7 +56,7 @@ sudo service mysqld status
 Подробное описание [администнирования MySQL](notes_mysql_admin.md)
 
 ### Перенос данных (содание резервных копий)
-Подробное описание [переноса данных](notes_mysql_replication.md)
+Подробное описание [переноса данных](notes_mysql_dump.md)
 
 ### Репликация
 Подробное описание [репликации MySQL](notes_mysql_replication.md)
