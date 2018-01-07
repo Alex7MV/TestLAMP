@@ -58,5 +58,5 @@ sudo service mysqld status
 ### Перенос данных (содание резервных копий)
 
 
-### Репликация master -> slave
-
+### Репликация
+Подробное описание [репликации MySQL](notes_mysql_replication.md)
