@@ -1,4 +1,5 @@
 ## Администрирование
+См. [документацию](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax-server-administration.html) по администрированию
 
 ### БД, создание и удаление
 ~~~
