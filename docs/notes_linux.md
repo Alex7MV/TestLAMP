@@ -19,7 +19,7 @@ $ sudo yum -y install policycoreutils-python
 ### SAMBA
 Установка
 ~~~
-$ sudo yum -y install samba
+$ sudo yum -y install samba samba-client samba-common
 ~~~
 
 Добавление службы в автоматический запуск
@@ -35,6 +35,11 @@ smbstatus
 
 FrewallD создаем правило для SAMBA и перезагружаем
 ~~~
-$ sudo firewall-cmd --permanent --add-service=samba
+$ sudo firewall-cmd --permanent --zone=public --add-service=samba
 $ sudo firewall-cmd --reload 
 ~~~
+
+#### Анонимный доступ средствами samba
+
+
+https://bozza.ru/art-262.html
