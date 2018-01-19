@@ -18,13 +18,13 @@ sudo /usr/pgsql-10/bin/postgresql-10-setup initdb
 
 Запуск
 ~~~
-systemctl start postgresql-10.service
-systemctl enable postgresql-10.service
+sudo systemctl start postgresql-10.service
+sudo systemctl enable postgresql-10.service
 ~~~
 
 Проверка успешного запуска
 ~~~
-systemctl status postgresql-10.service
+sudo systemctl status postgresql-10.service
 ~~~
 
 ### [pgAdmin](https://www.pgadmin.org/)
