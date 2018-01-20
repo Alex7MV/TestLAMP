@@ -34,7 +34,7 @@ sudo systemctl status postgresql-10.service
 # IPv4 local connections:
 host    all             all             127.0.0.1/32          ident
 ~~~
-и заменяем её (где 192.168.0.0/24 - подсеть с которй разрешено подключение к БД):
+и заменяем её (где 192.168.1.0/24 - подсеть с которй разрешено подключение к БД):
 ~~~
 # IPv4 local connections:
 host    all             all             192.168.1.0/24          md5
@@ -53,6 +53,18 @@ listen_addresses = '*'
 ~~~
 sudo firewall-cmd --permanent --add-port=5432/tcp
 sudo firewall-cmd --reload
+~~~
+
+Настройка пользователя postgres
+По умолчанию пользователь postgres создается без пароля, для того чтобы затадь пароль переключимся на пользователя postgres и запустим утилиту psql:
+~~~
+$ psql -U postgres
+# \password postgres
+~~~
+
+Проверяем работу, запрашиваем текущую дату
+~~~
+# select current_date;
 ~~~
 
 ### [pgAdmin](https://www.pgadmin.org/)
