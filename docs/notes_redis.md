@@ -1,4 +1,4 @@
-## [Redis](docs/notes_redis.md)
+## [Redis](https://redis.io/)
 
 
 ### Установка
